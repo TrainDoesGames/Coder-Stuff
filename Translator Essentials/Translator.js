@@ -4,7 +4,7 @@ const readline = require('readline').createInterface({
     output: process.stdout
   })
 
-  readline.question(`What is your message?\n#Prefix your message with ">" to make it encoded\n#Prefix your message with "<" to make it decoded\n`, MSG => {
+  readline.question(`What do you want encoded/decoded?\n#Prefix your message with ">" to make it encoded\n#Prefix your message with "<" to make it decoded\n`, MSG => {
 
     if(MSG.charAt(0) == ">") {
 
