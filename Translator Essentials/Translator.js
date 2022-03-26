@@ -8,6 +8,8 @@ const readline = require('readline').createInterface({
 
     if(MSG.charAt(0) == ">") {
 
+    const LowMSG = MSG.toLowerCase();
+
     const Replacements = {
         a: Letter.a,
         b: Letter.b,
@@ -37,7 +39,7 @@ const readline = require('readline').createInterface({
         z: Letter.z
     }
 
-    CompMSG = str.substr(1, str.length);
+    const CompMSG = LowMSG.slice(1)
 
     const NewMSG = CompMSG.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, function(matched){
         return Replacements[matched];
@@ -45,6 +47,8 @@ const readline = require('readline').createInterface({
 
     console.log(NewMSG)
 }else if(MSG.charAt(0) == "<") {
+
+    const LowMSG = MSG.toLowerCase();
 
     const Replacements1 = {
         hn1: "a",
@@ -75,7 +79,7 @@ const readline = require('readline').createInterface({
         hn26: "z"
     }
 
-    CompMSG = str.substr(1, str.length);
+    const CompMSG = LowMSG.slice(1)
 
     const NewMSG = CompMSG.replace(/hn26|hn25|hn24|hn23|hn22|hn21|hn20|hn19|hn18|hn17|hn16|hn15|hn14|hn13|hn12|hn11|hn10|hn9|hn8|hn7|hn6|hn5|hn4|hn3|hn2|hn1/gi, function(matched){
         return Replacements1[matched];
