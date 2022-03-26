@@ -75,11 +75,11 @@ const readline = require('readline').createInterface({
         hn26: "z"
     }
 
-    const SplitMSG = MSG.split('hn1','hn2','hn3','hn4','hn5','hn6','hn7','hn8','hn9','hn10','hn11','hn12','hn13','hn14','hn15','hn16','hn17','hn18','hn19','hn20','hn21','hn22','hn23','hn24','hn25','hn26').join(' ')
+    const SplitMSG = MSG.split(/hn1|hn2|hn3|hn4|hn5|hn6|hn7|hn8|hn9|hn10|hn11|hn12|hn13|hn14|hn15|hn16|hn17|hn18|hn19|hn20|hn21|hn22|hn23|hn24|hn25|hn26/).join("-")
 
     console.log(SplitMSG)
 
-    const NewMSG = MSG.replace(/hn1|hn2|hn3|hn4|hn5|hn6|hn7|hn8|hn9|hn10|hn11|hn12|hn13|hn14|hn15|hn16|hn17|hn18|hn19|hn20|hn21|hn22|hn23|hn24|hn25|hn26/gi, function(matched){
+    const NewMSG = SplitMSG.replace(/hn1|hn2|hn3|hn4|hn5|hn6|hn7|hn8|hn9|hn10|hn11|hn12|hn13|hn14|hn15|hn16|hn17|hn18|hn19|hn20|hn21|hn22|hn23|hn24|hn25|hn26/gi, function(matched){
         return Replacements[matched];
     });
 
