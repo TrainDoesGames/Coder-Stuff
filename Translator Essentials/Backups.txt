@@ -1,0 +1,6 @@
+hn26|hn25|hn24|hn23|hn22|hn21|hn20|hn19|hn18|hn17|hn16|hn15|hn14|hn13|hn12|hn11|hn10|hn9|hn8|hn7|hn6|hn5|hn4|hn3|hn2|hn1
+
+
+const SplitMSG = MSG.split(/hn26|hn25|hn24|hn23|hn22|hn21|hn20|hn19|hn18|hn17|hn16|hn15|hn14|hn13|hn12|hn11|hn10|hn9|hn8|hn7|hn6|hn5|hn4|hn3|hn2|hn1/).join(' ')
+
+console.log(SplitMSG)

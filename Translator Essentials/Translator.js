@@ -8,8 +8,6 @@ const readline = require('readline').createInterface({
 
     if(MSG.charAt(0) == ">") {
 
-    const LowMSG = MSG.toLowerCase();
-
     const Replacements = {
         a: Letter.a,
         b: Letter.b,
@@ -39,14 +37,16 @@ const readline = require('readline').createInterface({
         z: Letter.z
     }
 
-    const NewMSG = LowMSG.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, function(matched){
+    CompMSG = str.substr(1, str.length);
+
+    const NewMSG = CompMSG.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, function(matched){
         return Replacements[matched];
     });
 
     console.log(NewMSG)
 }else if(MSG.charAt(0) == "<") {
 
-    const Replacements = {
+    const Replacements1 = {
         hn1: "a",
         hn2: "b",
         hn3: "c",
@@ -75,12 +75,10 @@ const readline = require('readline').createInterface({
         hn26: "z"
     }
 
-    const SplitMSG = MSG.split(/hn1|hn2|hn3|hn4|hn5|hn6|hn7|hn8|hn9|hn10|hn11|hn12|hn13|hn14|hn15|hn16|hn17|hn18|hn19|hn20|hn21|hn22|hn23|hn24|hn25|hn26/).join("-")
+    CompMSG = str.substr(1, str.length);
 
-    console.log(SplitMSG)
-
-    const NewMSG = SplitMSG.replace(/hn1|hn2|hn3|hn4|hn5|hn6|hn7|hn8|hn9|hn10|hn11|hn12|hn13|hn14|hn15|hn16|hn17|hn18|hn19|hn20|hn21|hn22|hn23|hn24|hn25|hn26/gi, function(matched){
-        return Replacements[matched];
+    const NewMSG = CompMSG.replace(/hn26|hn25|hn24|hn23|hn22|hn21|hn20|hn19|hn18|hn17|hn16|hn15|hn14|hn13|hn12|hn11|hn10|hn9|hn8|hn7|hn6|hn5|hn4|hn3|hn2|hn1/gi, function(matched){
+        return Replacements1[matched];
     });
 
     console.log(NewMSG);
@@ -93,4 +91,3 @@ const readline = require('readline').createInterface({
 
     readline.close()
   })
-  
