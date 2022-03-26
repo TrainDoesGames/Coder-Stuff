@@ -4,7 +4,7 @@ const readline = require('readline').createInterface({
     output: process.stdout
   })
 
-  readline.question(`What do you want encoded/decoded?\n#Prefix your message with ">" to make it encoded\n#Prefix your message with "<" to make it decoded\n`, MSG => {
+  readline.question(`What do you want encoded/decoded?\n#Prefix your message with ">" to make it encoded\n#Prefix your message with "<" to make it decoded\n#Cancel this command by saying "cancel" in the response box\n`, MSG => {
 
     if(MSG.charAt(0) == ">") {
 
@@ -91,12 +91,12 @@ const readline = require('readline').createInterface({
 
     console.log(NewMSG);
 
+}else if(MSG.toLowerCase() == "cancel") {
+    console.log("*Alright, have a good day!")
 }else if(MSG.charAt(0) != ">") {
-    console.log("Please enter a method!")
+    console.log("**Please enter a method!")
 }else if(MSG.charAt(0) != "<") {
-    console.log("Please enter a method!")
-}else if(MSG.toLowerCase() == cancel) {
-    console.log("Alright, have a good day!")
+    console.log("**Please enter a method!")
 }
 
     readline.close()
