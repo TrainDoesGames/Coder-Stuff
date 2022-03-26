@@ -95,6 +95,8 @@ const readline = require('readline').createInterface({
     console.log("Please enter a method!")
 }else if(MSG.charAt(0) != "<") {
     console.log("Please enter a method!")
+}else if(MSG.toLowerCase() == cancel) {
+    console.log("Alright, have a good day!")
 }
 
     readline.close()
